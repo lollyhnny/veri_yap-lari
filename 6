@@ -1,0 +1,57 @@
+//1-2+3-4+5-6+7...100
+using System;
+
+class Program
+{
+   
+    static int bilg(int a)
+    {
+     
+
+       if (a >= 101) return 0;
+       if (a %2== 1) 
+            return a + bilg(a + 1);
+       else
+           return bilg(a + 1) - a;
+       
+
+    
+
+
+
+
+    }
+
+    static void Main(string[] args)
+    {
+        bilg(1);
+
+    }
+}
+
+
+//veya 2. yol olarak
+
+using System;
+
+class Program
+{
+   
+    static int bilg(int a, int flag)
+    {
+     //1-2+3-4+5-6+7...100
+
+       if (a >= 101) return 0;
+    
+       return a*flag + bilg(a + 1,flag*-1);
+     
+
+
+    }
+
+    static void Main(string[] args)
+    {
+        bilg(1,1);
+
+    }
+}

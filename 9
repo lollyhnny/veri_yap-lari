@@ -1,0 +1,57 @@
+using System;
+
+class Program
+{
+    
+    static void Main(string[] args)
+    {
+
+    
+   
+
+        // bir ülkede yapılacak seçimde 100 tane il, her ilin 20 tane ilçesi her ilçe max 50 mahalle her mahallenin max 100 sandık var
+        int[,,,] x = new int[100, 20, 50, 100];
+        x[5,1,4,30]=125; // olsun
+        x[4, 2, 5, 20] = 258;
+        //0..99 iller
+        //0.19 ilçeler
+        //en fazla oy kullanılan ikinci ili bulunuz.
+        
+       
+       
+        int[] value= new int  [2]; //1. 2. il
+        int[] indis = new int[2]; //indis değerlerimiz
+
+
+        for (int il = 0; il < 100; il++)
+        {   int toplam = 0;
+            for (int ilce = 0; ilce < 20; ilce++)
+            {
+                for (int mah = 0; mah < 50; mah++)
+                {
+                    for (int sandik = 0; sandik < 100; sandik++)
+                    {
+
+                        toplam = toplam + x[il, ilce, mah, sandik];
+                    }
+                }
+            }
+            if (toplam > value[0]) 
+            {
+                value[1] = value[0];
+                indis[1] = indis[0];
+                value[0] = toplam;
+                indis[0] = il;
+            }
+            else if(toplam > value[1])
+            {
+                value[1] = toplam;
+                indis[1] = il;
+            }
+            
+
+        }
+        
+        
+    }
+}

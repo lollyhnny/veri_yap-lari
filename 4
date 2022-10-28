@@ -1,0 +1,34 @@
+// 1den 5 kadar olan sayıların recursive toplamı
+using System;
+
+class Program
+{
+    static int t1 = 0;
+    static int bilg(int a)
+    {
+
+
+       if (a >= 5) return 0;
+       return a +  bilg(a + 1);
+
+        // 1+ bilg(2)
+        // 2+ bilg(3)
+        // 3+ bilg(4)
+        // 4+ bilg(5)
+        // bilg(5) e gelir 0 döner
+        //yani
+        // 1+ 9 toplam 10 bulunur
+        // 2+ 7
+        // 3+ 4
+        // 4+ 0
+
+
+    }
+
+    static int d = 1;
+    static void Main(string[] args)
+    {
+        bilg(1);
+
+    }
+}

@@ -1,0 +1,24 @@
+//1 den 100e kadar olan sayıların recursive olarak toplanması
+using System;
+
+class Program
+{
+    static int t1 = 0;
+    static void bilg(int a)
+    {
+
+    
+        if (a >= 100) return;
+        t1 = t1 + a;
+        bilg(a + 1);
+       
+
+    }
+    
+    static int d = 1;
+    static void Main(string[] args)
+    {
+        bilg(0);
+        
+    }
+}    

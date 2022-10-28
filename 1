@@ -1,0 +1,27 @@
+using System;
+
+class Program
+{   static void bilg(int a)
+    {
+        if (a == 5) return; // (a==55555555) yapabiliriz ama kullanılan stack patlar
+        Console.WriteLine(a);  
+        bilg(a + 1); //çıktı 0 1 2 3 4
+    }
+    // eğer bu methodu 
+    /* static void bilg(int a)
+    {
+        if (a == 5) return; 
+       
+        bilg(a + 1);
+       //int abc = min(3,4,5); burada bu methot gibi herhangi bir methot kullansak dahi a değeri ekrana yazılamadan önce methotun çalışması gerekir.
+        Console.WriteLine(a);
+    bu şekilde kullanırsak öncelikle bilg(a+1); çalışacağından çıktı 4 3 2 1 0 olur
+    */
+   
+ 
+    static int d = 1;
+    static void Main(string[] args)
+    {
+        bilg(0);
+    }
+}    

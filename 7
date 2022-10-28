@@ -1,0 +1,18 @@
+using System;
+
+class Program
+{
+    static int min(int a, int b,int c)
+    {
+        if (a > b) a = b;
+        if (a > c) return c;
+        else return a;
+    }
+    static void Main(string[] args)
+    {
+      
+        Console.WriteLine(min(3, 4, 5));
+        Console.ReadLine();
+
+    }
+}

@@ -30,7 +30,7 @@ class Program
 }
 
 
-//veya 2. yol olarak
+//2. yol olarak
 
 using System;
 
@@ -52,6 +52,31 @@ class Program
     static void Main(string[] args)
     {
         bilg(1,1);
+
+    }
+}
+
+
+//3. yol 
+using System;
+
+class Program
+{
+    static int t = -1; // dışardan static değişken alarak da çözebiliriz. performans bu şekilde local değişken kullanımına göre daha iyidir.
+    static int bilg(int a)
+    {
+   
+
+       if (a >= 101) return 0;
+       t = t * -1;
+       return a*t + bilg(a + 1);
+    
+   
+    }
+
+    static void Main(string[] args)
+    {
+        bilg(1);
 
     }
 }

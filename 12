@@ -48,4 +48,8 @@ class Program
 
     }
 }
+ //dizilere araya elelman ekleyemiyoruz.
+    //çıkan eleman yeri boş kalıyor, diziler tamamen kayması gerekir.
+    //veri hareketi maliyetlidir
+    //statik yapılıdırlar tanımladıktan sonra program çalışırken değiştiremezsin!
 

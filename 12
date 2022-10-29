@@ -1,13 +1,14 @@
-static void Main(string[] args)
+
+using System;
+
+class Program
+{ 
+    
+    static void Main(string[] args)
     {
-        int[] x = new int[100];
-        for (int i = 0; i < 100; i++)
-        {
-            x[i] = i + 1
-;
-        }
-        int[] y = new int[5];
-        int[] lmt = { 3, 4, 5, 6, 1 }; //iç içe for döngüsünü düzenleyerek tek döngüde kullanma
+        int[] y = new int[6];
+        int[] lmt = {2,2,2,2,2,2,2}; //iç içe for döngüsünü düzenleyerek tek döngüde kullanma
+        int sayi = 0;
         //lengthleri lmt ye göre tut
         /*
             for (int i = 0; i < 3; i++)
@@ -28,17 +29,21 @@ static void Main(string[] args)
                 }
             }
        */
-         while (y[5]<=1)
+    while (y[4]<1)
         {
+            sayi++;
             y[0]++;
             int indis = 0;
             while (y[indis] >= lmt[indis])
             {
                 y[indis] = 0;
+                indis = indis + 1;
                 y[indis]++;
 
             } 
         }
+        Console.WriteLine(sayi);
+        return;
         
 
     }

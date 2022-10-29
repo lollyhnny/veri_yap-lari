@@ -1,0 +1,45 @@
+static void Main(string[] args)
+    {
+        int[] x = new int[100];
+        for (int i = 0; i < 100; i++)
+        {
+            x[i] = i + 1
+;
+        }
+        int[] y = new int[5];
+        int[] lmt = { 3, 4, 5, 6, 1 }; //iç içe for döngüsünü düzenleyerek tek döngüde kullanma
+        //lengthleri lmt ye göre tut
+        /*
+            for (int i = 0; i < 3; i++)
+            {
+                 i 0 iken j 4kere dönecek döngü toplam i*j*k*l*m kere çalışacak(length)
+                for (int j = 0; j < 4; j++)
+                {
+                    for (int k = 0; k < 5; k++)
+                    {
+                        for (int l = 0; l < 6; l++)
+                        {
+                            for (int m = 0; m < 1; m++)
+                            {
+
+                            }
+                        }
+                    }
+                }
+            }
+       */
+         while (y[5]<=1)
+        {
+            y[0]++;
+            int indis = 0;
+            while (y[indis] >= lmt[indis])
+            {
+                y[indis] = 0;
+                y[indis]++;
+
+            } 
+        }
+        
+
+    }
+}
